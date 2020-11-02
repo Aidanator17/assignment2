@@ -24,36 +24,47 @@ article {
     grid-row: 2;
     grid-column: 2/3;
     display: flex;
+    display: grid;
+    grid-template-columns: 1fr 4.5fr 1fr 1fr 4.5fr 1fr;;
+    grid-template-rows: 1fr 11fr 1fr;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
 }
 
 .newnote {
     background-color: #5d997c;
-    order: 0;
+    grid-column: 1/2;
+    grid-row: 1;
     margin: 10px;
 }
 
 .save {
     background-color: #5d997c;
-    order: 3;
+    grid-row: 3;
+    grid-column: 3/4;
+    margin: 5px;
 }
 
 .darktheme {
     background-color: #696969;
-    order: 0;
+    grid-column: 6/7;
+    grid-row: 1;
     margin: 10px;
     color: #ececec;
 }
 
 .cancel {
     background-color: #d43b15;
-    order: 4;
+    grid-row: 3;
+    grid-column: 4/5;
+    margin: 5px;
 }
 
 .placeholder {
     order: 2;
+    grid-row: 2/3;
+    grid-column: 2/6;
 }
 
 footer {
@@ -67,6 +78,8 @@ footer {
 article > button {
     padding: 1%;
     border-radius: 10px;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 .nicefont {
